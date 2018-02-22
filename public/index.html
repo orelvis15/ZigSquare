@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html ng-app="index">
+        <head>
+            <meta charset="utf-8"/>
+            <title> ZigSquare </title>
+            <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+        </head>
+        <body>
+            <div class="container" ng-controller="main" ng-init="loadscores()">
+                <h1>{{title}}</h1>
+                <table class="table table-striped table-hover">
+                    <thead class="alert-info">
+                        <tr>
+                            <th> No. </th>
+                            <th> Name </th>
+                            <th> Score </th>
+                            <th> level </th>
+                            <th> attemps </th>
+                            <!--th> Date </th>
+                            <th> Like </th>
+                            <th> os </th>
+                            <th> model </th-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="success" ng-repeat="item in scores">
+                            <td>0</td>
+                            <td> {{item.name}} </td>
+                            <td> {{item.score}} </td>
+                            <td> {{item.level}} </td>
+                            <td> {{item.attemps}} </td>
+                            <!--td> {{item.lastDate}} </td>
+                            <td> {{item.like}} </td>
+                            <td> {{item.os}} </td>
+                            <td> {{item.model}} </td-->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                
+            <script type="text/javascript" src="/javascripts/angular.min.js"></script>
+            <script type="text/javascript" src="/javascripts/angular-route.js"></script>
+            <script type="text/javascript" src="/javascripts/jquery-1.12.0.min.js"></script>
+            <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/javascripts/indexController.js"></script>
+        </body>
+</html>
